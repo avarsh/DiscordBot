@@ -38,7 +38,7 @@ def add_repeated_to_db(datetime_object, seconds, message, channel_id):
 
         f.write(data + '\n')
 
-    next_timestamp = start_timestamp
+    next_timestamp = datetime_object
     if int(datetime.now().timestamp()) > start_timestamp:
         next_timestamp = datetime.fromtimestamp(start_timestamp + seconds)
 
